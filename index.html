@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <button onclick="plusOne()">Add to card </button>
+    <button onclick="subOne()">move to wish list</button>
+    <button onclick="plusTwo() ">1+1 Add to  card</button>
+
+    <p id="disply"></p>
+    <script>
+        let noOfCardValue = 0;
+        let disply = document.querySelector("#disply");
+
+        function updateDisplay() {
+            disply.innerHTML = `No of Card item is ${noOfCardValue}`;
+        }
+
+        function plusOne() {
+            noOfCardValue += 1;
+            console.log(noOfCardValue)
+            updateDisplay()
+        }
+
+        function subOne() {
+            if (noOfCardValue != 0) {
+                noOfCardValue -= 1;
+                console.log(noOfCardValue);
+                updateDisplay()
+            }
+
+        }
+
+        function plusTwo() {
+
+            noOfCardValue += 2;
+            console.log(noOfCardValue)
+            updateDisplay()
+        }
+    </script>
+</body>
+
+</html>

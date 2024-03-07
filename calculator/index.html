@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="outer">
+                <div class="inner">
+                    <div class="display-screen">
+                        <textarea name="" id="disply" cols="30" rows="5" readonly></textarea>
+                    </div>
+                    <div class="btn-container">
+                        <div class="row">
+                            <button class="common-btn" onclick="currentValue='';document.querySelector('#disply').value = ''">C</button>
+                            <button class="common-btn" onclick="currentValue=currentValue+'1';document.querySelector('#disply').value = currentValue;">1</button>
+                            <button class="common-btn" onclick="currentValue=currentValue+'2';document.querySelector('#disply').value = currentValue;">2</button>
+                        </div>
+                        <div class="row">
+                            <button class="common-btn" onclick="currentValue=currentValue+'+';document.querySelector('#disply').value = currentValue;">+</button>
+                            <button class="common-btn" onclick="currentValue=currentValue+'3';document.querySelector('#disply').value = currentValue;">3</button>
+                            <button class="common-btn" onclick="currentValue=currentValue+'4';document.querySelector('#disply').value = currentValue;">4</button>
+                        </div>
+                        <div class="row">
+                            <button class="common-btn" onclick="currentValue=currentValue+'-';document.querySelector('#disply').value = currentValue;">-</button>
+                            <button class="common-btn" onclick="currentValue=currentValue+'5';document.querySelector('#disply').value = currentValue;">5</button>
+                            <button class="common-btn" onclick="currentValue=currentValue+'6';document.querySelector('#disply').value = currentValue;">6</button>
+                        </div>
+                        <div class="row">
+                            <button class="common-btn" onclick="currentValue=currentValue+'*';document.querySelector('#disply').value = currentValue;">*</button>
+                            <button class="common-btn" onclick="currentValue=currentValue+'7';document.querySelector('#disply').value = currentValue;">7</button>
+                            <button class="common-btn" onclick="currentValue=currentValue+'8';document.querySelector('#disply').value = currentValue;">8</button>
+                        </div>
+                        <div class="row">
+                            <button class="common-btn" onclick="currentValue=currentValue+'/';document.querySelector('#disply').value = currentValue;">/</button>
+                            <button class="common-btn" onclick="currentValue=currentValue+'9';document.querySelector('#disply').value = currentValue;">9</button>
+
+                            <button class="common-btn" onclick="
+                            let result=eval(currentValue);
+                            currentValue=result
+                           document.querySelector('#disply').value = currentValue;">=</button>
+                        </div>
+                        <div class="row">
+                            <button class="common-btn" onclick="currentValue=currentValue+'0';document.querySelector('#disply').value = currentValue;">0</button>
+                            <button class="common-btn" onclick="currentValue=currentValue+'.';document.querySelector('#disply').value = currentValue;">.</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <script>
+        let currentValue = '';
+    </script>
+</body>
+
+</html>
